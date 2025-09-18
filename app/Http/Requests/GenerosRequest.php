@@ -4,14 +4,14 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class MovieRequest extends FormRequest
+class GenerosRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        return true;
+        return True;
     }
 
     /**
@@ -23,10 +23,6 @@ class MovieRequest extends FormRequest
     {
         return [
             'title' => 'string|min:5',
-            'synopsis' => 'string|min:20',
-            'duration' => 'string|min:2',
-            'releaseDate' => 'string|min:2',
-            'director' => 'string|max:50',
         ];
     }
 }
