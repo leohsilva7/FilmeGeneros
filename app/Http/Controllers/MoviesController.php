@@ -18,7 +18,7 @@ class MoviesController extends Controller
             'Todos os filmes',
             'filme' => $movies,
         ],200);
-    }
+    }   
 
     /**
      * Store a newly created resource in storage.
@@ -82,7 +82,7 @@ class MoviesController extends Controller
         else{
             return response()->json([
                 'Erro ao atualizar filme'
-            ],404);
+            ],400);
         }
     }
 
@@ -95,7 +95,7 @@ class MoviesController extends Controller
         if ($delete){
             return response()->json([
                 'Filme deletado com sucesso',
-            ],200);
+            ],204);
         }
         else{
             return response()->json([

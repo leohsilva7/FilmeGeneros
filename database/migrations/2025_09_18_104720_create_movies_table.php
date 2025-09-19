@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('synopsis');
             $table->string('duration');
             $table->string('releaseDate');
-            $table->string('director');
+            $table->string('director')->nullable();
             $table->timestamps();
         });
     }
